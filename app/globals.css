@@ -29,31 +29,57 @@
   @apply border-border;
 }
 
-body {
-  @apply bg-background text-foreground;
-  font-feature-settings: "rlig" 1, "calt" 1;
-}
-
 html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#__next {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
   overflow-x: hidden;
 }
 
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
+  
+  *,
+  *::before,
+  *::after {
+    max-width: 100%;
+  }
+  
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-lato), sans-serif;
   }
+  
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-playfair), serif;
     font-weight: 700;

@@ -43,13 +43,13 @@ export function Navbar() {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
           isScrolled
             ? "bg-background/95 backdrop-blur-md shadow-md border-b border-border"
             : "bg-background border-b border-border"
         )}
       >
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto px-4 lg:px-8 w-full max-w-full">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link

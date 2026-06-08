@@ -32,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="sv">
-      <body className={`${lato.variable} ${playfair.variable} font-sans`}>{children}</body>
+    <html lang="sv" className="overflow-x-hidden">
+      <body className={`${lato.variable} ${playfair.variable} font-sans overflow-x-hidden w-full`}>{children}</body>
     </html>
   );
 }
