@@ -59,7 +59,7 @@ export function Navbar() {
             >
               <div className="relative w-10 h-10 md:w-12 md:h-12">
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.webp"
                   alt="Dennis Kök"
                   fill
                   className="object-cover rounded-lg"

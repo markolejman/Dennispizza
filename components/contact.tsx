@@ -97,7 +97,7 @@ export function Contact() {
                   className="flex items-center justify-center gap-2"
                   aria-label="Öppna Google Maps för vägbeskrivning"
                 >
-                  Öppna i Maps
+                  Öppna i Google Maps
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </a>
               </Button>

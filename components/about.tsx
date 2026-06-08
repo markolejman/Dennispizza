@@ -29,7 +29,7 @@ export function About() {
               className="rounded-lg overflow-hidden shadow-xl w-full"
             >
               <Image
-                src="/om-oss.jpg"
+                src="/om-oss.webp"
                 alt="Dennis Kök Pizza - Om Oss"
                 width={400}
                 height={300}

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -16,7 +17,7 @@ export function Hero() {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('/hero.jpg')",
+              backgroundImage: "url('/hero.webp')",
             }}
           />
           {/* Overlay */}
@@ -69,9 +70,16 @@ export function Hero() {
                 href="https://wolt.com/sv/swe/stockholm/restaurant/dennis-kok?srsltid=AfmBOoo0y_aZTY4I6THGE6N2Ngs4yPHaPBxeF6PHanPVrTxPMLN4lfHM"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
+                className="flex items-center justify-center gap-3"
               >
-                Hemkörning med Wolt
+                <Image
+                  src="/wolt.webp"
+                  alt="Wolt"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
+                Hemkörning Wolt
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -86,9 +94,16 @@ export function Hero() {
                 href="https://www.foodora.se/restaurant/iy1z/dennis-kok-dennis-pizzeria-and-grill"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
+                className="flex items-center justify-center gap-3"
               >
-                Beställ med Foodora
+                <Image
+                  src="/foodora.webp"
+                  alt="Foodora"
+                  width={56}
+                  height={56}
+                  className="object-contain"
+                />
+                Hemkörning Foodora
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>

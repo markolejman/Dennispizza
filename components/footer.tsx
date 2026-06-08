@@ -22,15 +22,15 @@ export function Footer() {
 
           {/* Center - Logo */}
           <div className="flex items-center gap-3">
-            <div className="relative w-10 h-10">
+            <div className="relative w-14 h-14">
               <Image
-                src="/logo.jpg"
+                src="/logo.webp"
                 alt="Dennis Kök"
                 fill
                 className="object-cover rounded-lg"
               />
             </div>
-            <span className="text-lg font-bold text-foreground">
+            <span className="text-xl font-bold text-foreground">
               Dennis Kök
             </span>
           </div>
