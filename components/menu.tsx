@@ -11,6 +11,7 @@ export function Menu() {
   const [activeCategory, setActiveCategory] = useState(menuData[0].id);
   const [ref, isInView] = useInView({ threshold: 0.1 });
   const menuTopRef = useRef<HTMLDivElement>(null);
+  const isChangingRef = useRef(false);
 
   const scrollToTop = () => {
     // Scroll to match navbar anchor behavior
@@ -24,8 +25,19 @@ export function Menu() {
   };
 
   const handleCategoryChange = (categoryId: string) => {
+    // Prevent double-firing on mobile
+    if (isChangingRef.current || categoryId === activeCategory) {
+      return;
+    }
+    
+    isChangingRef.current = true;
     setActiveCategory(categoryId);
     scrollToTop();
+    
+    // Reset the flag after a short delay
+    setTimeout(() => {
+      isChangingRef.current = false;
+    }, 300);
   };
 
   const activeCategoryData = menuData.find((cat) => cat.id === activeCategory);
@@ -111,8 +123,7 @@ export function Menu() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    onClick={scrollToTop}
-                    className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg shadow-sm cursor-pointer"
+                    className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg shadow-sm"
                   >
                     <div className="flex justify-between items-start gap-4">
                       <div className="flex-1">
