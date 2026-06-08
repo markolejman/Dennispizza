@@ -23,8 +23,8 @@ export function Contact() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -39,8 +39,8 @@ export function Contact() {
           {/* Phone Card */}
           <motion.article
             initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
             className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300"
           >
             <div className="flex flex-col items-center text-center gap-4">
@@ -68,8 +68,8 @@ export function Contact() {
           {/* Address & Maps Card */}
           <motion.article
             initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
             className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300"
           >
             <div className="flex flex-col items-center text-center gap-4">
@@ -106,9 +106,9 @@ export function Contact() {
 
           {/* Opening Hours Card */}
           <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
             className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300 md:col-span-2 lg:col-span-1"
           >
             <div className="flex flex-col items-center text-center gap-4">

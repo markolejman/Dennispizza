@@ -13,8 +13,8 @@ export function About() {
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-4xl md:text-5xl font-bold mb-12 text-center"
         >
           Om Oss
@@ -24,8 +24,8 @@ export function About() {
           <div className="max-w-sm mx-auto md:mx-0 flex flex-col gap-6 items-center md:items-start">
             <motion.div
               initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
               className="rounded-lg overflow-hidden shadow-xl w-full"
             >
               <Image
@@ -40,8 +40,8 @@ export function About() {
             
             <motion.div
               initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
               className="w-full md:hidden"
             >
               <p className="text-lg text-muted-foreground leading-relaxed text-center">
@@ -52,8 +52,8 @@ export function About() {
 
             <motion.div
               initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
               className="w-full flex justify-center md:hidden"
             >
               <a
@@ -76,8 +76,8 @@ export function About() {
 
           <motion.div
             initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
             className="hidden md:block space-y-8"
           >
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">

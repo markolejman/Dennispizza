@@ -48,8 +48,8 @@ export function Menu() {
         <motion.div
           ref={menuTopRef}
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Vår Meny</h2>
@@ -62,8 +62,8 @@ export function Menu() {
           {/* Desktop Category Navigation */}
           <motion.aside
             initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
             className="lg:w-64 flex-shrink-0 hidden lg:block"
           >
             <div className="sticky top-24 bg-card border border-border rounded-lg p-4 shadow-md">
@@ -114,15 +114,12 @@ export function Menu() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
                 className="grid gap-6 md:grid-cols-2"
               >
                 {activeCategoryData?.items.map((item, index) => (
-                  <motion.article
+                  <article
                     key={`${activeCategory}-${index}`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
                     className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg shadow-sm"
                   >
                     <div className="flex justify-between items-start gap-4">
@@ -142,7 +139,7 @@ export function Menu() {
                         </span>
                       </div>
                     </div>
-                  </motion.article>
+                  </article>
                 ))}
               </motion.div>
             </AnimatePresence>

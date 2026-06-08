@@ -11,8 +11,8 @@ export function Location() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Hitta Hit</h2>
@@ -23,8 +23,8 @@ export function Location() {
 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
           className="w-full max-w-7xl mx-auto"
         >
           <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden border border-border shadow-xl">

@@ -57,3 +57,30 @@ html {
     text-wrap: balance;
   }
 }
+
+/* Animation performance optimizations */
+@layer utilities {
+  /* Prevent flickering on animated elements */
+  [class*="motion-"] {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+  
+  /* Optimize fade animations */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

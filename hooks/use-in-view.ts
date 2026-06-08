@@ -10,12 +10,16 @@ export function useInView(
 ): [React.RefObject<HTMLElement>, boolean] {
   const { threshold = 0, rootMargin = "0px" } = options;
   const [isInView, setIsInView] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsInView(entry.isIntersecting);
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsInView(true);
+          setHasAnimated(true);
+        }
       },
       { threshold, rootMargin }
     );
@@ -30,7 +34,7 @@ export function useInView(
         observer.unobserve(currentRef);
       }
     };
-  }, [threshold, rootMargin]);
+  }, [threshold, rootMargin, hasAnimated]);
 
   return [ref, isInView];
 }
