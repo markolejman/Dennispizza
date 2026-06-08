@@ -22,8 +22,8 @@ export function Contact() {
     <section id="contact" className="py-20 md:py-32 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="text-center mb-16"
         >
@@ -38,8 +38,8 @@ export function Contact() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Phone Card */}
           <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300"
           >
@@ -67,8 +67,8 @@ export function Contact() {
 
           {/* Address & Maps Card */}
           <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300"
           >

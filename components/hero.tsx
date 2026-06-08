@@ -27,24 +27,23 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 md:py-32">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="max-w-4xl mx-auto text-center"
         >
           <div className="relative inline-block">
             {/* Subtle white shadow backdrop */}
-            <div className="absolute inset-0 bg-white/40 blur-2xl scale-105 rounded-lg" />
+            <div className="absolute inset-0 bg-white/50 blur-3xl scale-110 rounded-lg" />
             
             {/* Text content */}
             <div className="relative">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground drop-shadow-[0_2px_6px_rgba(255,255,255,0.9)]">
                 Dennis Kök
               </h1>
 
-              <p className="text-lg md:text-xl lg:text-2xl text-foreground mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_3px_rgba(255,255,255,0.7)]">
-                Pizza, pasta, sallader och à la carte – tillagat med kvalitet och
-                passion.
+              <p className="text-lg md:text-xl lg:text-2xl text-foreground mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_4px_rgba(255,255,255,0.8)] font-semibold">
+                Pizza, pasta, sallader och à la carte – tillagat med kvalitet och passion.
               </p>
             </div>
           </div>

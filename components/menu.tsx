@@ -35,8 +35,8 @@ export function Menu() {
       <div className="container mx-auto px-4">
         <motion.div
           ref={menuTopRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="text-center mb-16"
         >
@@ -49,8 +49,8 @@ export function Menu() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Desktop Category Navigation */}
           <motion.aside
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="lg:w-64 flex-shrink-0 hidden lg:block"
           >

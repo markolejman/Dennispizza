@@ -10,8 +10,8 @@ export function Location() {
     <section id="location" className="py-20 md:py-32 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="text-center mb-12"
         >
@@ -22,8 +22,8 @@ export function Location() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="w-full max-w-7xl mx-auto"
         >
