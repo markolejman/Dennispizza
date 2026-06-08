@@ -75,6 +75,23 @@ export function Hero() {
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
+
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="w-full sm:w-auto sm:min-w-[240px] font-semibold text-base md:text-lg py-6 transition-all duration-300 group"
+            >
+              <a
+                href="https://www.foodora.se/restaurant/iy1z/dennis-kok-dennis-pizzeria-and-grill"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2"
+              >
+                Beställ med Foodora
+                <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
           </div>
         </motion.div>
       </div>
